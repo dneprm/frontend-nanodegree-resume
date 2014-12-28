@@ -29,7 +29,7 @@ var bio = {
 	"welcomeMessage": "Everything happens for a reason",
 	"bioPicture": "images/picture.jpg",
 	"skills": [
-		"awesome", "programming", "teaching", "Javascript", "HTML", "CSS"
+		"programming", "teaching", "Javascript", "HTML", "CSS"
 	]
 }
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -76,7 +76,8 @@ var education = {
 		"location": "Dnipropetrovsk, Ukraine",
 		"degree": "PhD",
 		"dates": "2004-2012",
-		"url": "http://pgasa.dp.ua"
+		"url": "http://pgasa.dp.ua",
+		"major": "Economics"
 	}
 	],
 	"onlineCourses": [
@@ -84,19 +85,22 @@ var education = {
 	"title": "JavaScript Basics",	
 	"school": "Udacity",
 	"dates": "December 2014",
-	"url": "https://www.udacity.com/course/ud804"
+	"url": "https://www.udacity.com/course/ud804",
+	"major": "Computer science"
 	},
 	{
 	"title": "How to use Git and GitHub",	
 	"school": "Udacity",
 	"dates": "December 2014",
-	"url": "https://www.udacity.com/course/ud775"
+	"url": "https://www.udacity.com/course/ud775",
+	"major": "Computer science"
 	},
 	{
 	"title": "Intro to HTML and CSS",	
 	"school": "Udacity",
 	"dates": "December 2014",
-	"url": "https://www.udacity.com/course/ud304"
+	"url": "https://www.udacity.com/course/ud304",
+	"major": "Computer science"
 	}
 	]
 }
@@ -106,7 +110,7 @@ var projects = {
 	{
 		"title": "CV",
 		"dates": "December 2014",
-		"description": "created CV from the skretch"
+		"description": "created CV-page from the skretch"
 	},
 	{
 		"title": "Final Project at Intro to HTML & CSS Udacity Courses",
@@ -137,8 +141,6 @@ if (bio.skills.length > 0) {
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 		$("#skills").append(formattedSkill);
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[5]);
 		$("#skills").append(formattedSkill);
 };
 
@@ -253,3 +255,6 @@ function displayEducation() {
 displayEducation();
 
 $("#mapDiv").append(googleMap);
+
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
